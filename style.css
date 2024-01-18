@@ -147,15 +147,16 @@ h1 {
 	margin-top: 15px;
 }
 .radio-item label {
+    /* width: inherit; */
     color: #422800;
 	display: flex;
-	padding: 20px 60px;
+	padding: 20px 42px;
 	background: #fbeee0;
 	border: 2px solid #422800;
     box-shadow: #422800 4px 4px 0 0;
 	border-radius: 30px;
 	cursor: pointer;
-	font-size: 16px;
+	font-size: 1.5rem;
 	font-weight: 400;
 	min-width: 100px;
 	white-space: nowrap;
@@ -170,14 +171,14 @@ h1 {
 }
 
 /* needs correction */
-.day label:after {
+.radio-item label:after {
 	height: 20px;
 	width: 20px;
 	border: 2px solid #422800;
 	left: 20px;
 	top: calc(50% - 12px);
 }
-.day label:before {
+.radio-item label:before {
 	background: #422800;
 	height: 21px;
 	width: 20px;
@@ -188,14 +189,15 @@ h1 {
 	visibility: hidden;
 	transition: 0.4s ease-in-out 0s;
 }
-.day [type="radio"]:checked ~ label {
+.radio-item [type="radio"]:checked ~ label {
 	border-color: #422800;
 }
-.day [type="radio"]:checked ~ label::before {
+.radio-item [type="radio"]:checked ~ label::before {
 	opacity: 1;
 	visibility: visible;
 	transform: scale(1.1);
 }
+/* 
 .time label:after {
 	height: 20px;
 	width: 20px;
@@ -221,7 +223,7 @@ h1 {
 	opacity: 1;
 	visibility: visible;
 	transform: scale(1.1);
-}
+} */
 
 #dateTime{
     display: flex;
