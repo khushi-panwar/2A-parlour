@@ -1,0 +1,234 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)), url(./bg.png);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Averia Serif Libre", cursive;
+	background-color: rgb(19, 18, 21);
+	color: #ffffff;
+    user-select: none;
+}
+
+.header {
+    margin-top: 20px;
+}
+
+h4{
+    color: #fff;
+}
+
+.theme{
+    display: flex;
+    float: right;
+    color: #fff;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.theme-btn{
+  justify-content: space-around;
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: flex;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.theme-btn:hover {
+  background-color: #fff;
+}
+
+.theme-btn:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .theme-btn {
+    min-width: 80px;
+  }
+}
+
+
+
+h1 {
+    font-size: 40px;
+    color: white;
+    margin-top: 250px;
+}
+
+p {
+    font-size: 17px;
+    color: white;
+}
+
+h3 {
+    font-size: 25px;
+    color: white;
+}
+
+
+.col-md-7 {
+    max-height: 65vh;
+    min-width: 40vw;
+    margin-top: 80px;
+    box-shadow:1px 1px 60px 15px black;
+    background: rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.col-md-12 {
+    margin-top: 20px;
+}
+
+.label {
+    font-weight: normal;
+    margin-top: 15px;
+    color: white;
+    font-size: 2rem;
+    white-space: wrap;
+    align-items: start!important;
+}
+
+.form-control {
+    background: transparent;
+    border-radius: 0px;
+    border: 0px;
+    border-bottom: 1px solid black;
+    font-size: 18px;
+    margin-top: 15px;
+    height: 40px;
+}
+
+.form-control:focus{
+    background:transparent;
+    border: 0px;
+    border-bottom: 1px solid white;
+}
+
+/* radio checks */
+
+a {
+	text-decoration: none;
+}
+ul {
+	list-style-type: none;
+}
+
+.radio-section {
+	display: block;
+}
+h1 {
+	margin-bottom: 20px;
+}
+.radio-item [type="radio"] {
+	display: none;
+}
+.radio-item {
+	margin-top: 15px;
+}
+.radio-item label {
+    color: #422800;
+	display: flex;
+	padding: 20px 60px;
+	background: #fbeee0;
+	border: 2px solid #422800;
+    box-shadow: #422800 4px 4px 0 0;
+	border-radius: 30px;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: 400;
+	min-width: 100px;
+	white-space: nowrap;
+	position: relative;
+	transition: 0.4s ease-in-out 0s;
+}
+.radio-item label:after,
+.radio-item label:before {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+}
+
+/* needs correction */
+.day label:after {
+	height: 20px;
+	width: 20px;
+	border: 2px solid #422800;
+	left: 20px;
+	top: calc(50% - 12px);
+}
+.day label:before {
+	background: #422800;
+	height: 21px;
+	width: 20px;
+	left: 20px;
+	top: calc(50%-5px);
+	transform: scale(6);
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.4s ease-in-out 0s;
+}
+.day [type="radio"]:checked ~ label {
+	border-color: #422800;
+}
+.day [type="radio"]:checked ~ label::before {
+	opacity: 1;
+	visibility: visible;
+	transform: scale(1.1);
+}
+.time label:after {
+	height: 20px;
+	width: 20px;
+	border: 2px solid #422800;
+	left: 20px;
+	top: calc(50% - 12px);
+}
+.time label:before {
+	background: #422800;
+	height: 21px;
+	width: 20px;
+	left: 20px;
+	top: calc(50%-5px);
+	transform: scale(6);
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.4s ease-in-out 0s;
+}
+.time [type="radio"]:checked ~ label {
+	border-color: #422800;
+}
+.time [type="radio"]:checked ~ label::before {
+	opacity: 1;
+	visibility: visible;
+	transform: scale(1.1);
+}
+
+#dateTime{
+    display: flex;
+    width: 25rem;
+    justify-content: center;
+    padding: 5px;
+    margin: 10px 20px ;
+    color: black;
+    background-color: #fbeee0;
+}
