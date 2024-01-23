@@ -26,18 +26,24 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-
+// logo changing functionality
 function updateLogo(theme) {
   const logoElement = document.querySelector('.logo');
+  const labelText = document.querySelector('.label')
   console.log(logoElement);
+  console.log(labelText);
 
   
   if (theme === 'blue' ) {
     logoElement.src = './Screenshot_2024-01-21_162256-removebg.png'; 
+    labelText.style.color = "#000"
   } else if (theme === 'pink' ) {
     logoElement.src = './Screenshot_2024-01-21_162256-removebg.png'; 
+    labelText.style.color = "#000"
   } else {
-    // default logo
-    logoElement.src = './Screenshot_2024-01-21_162816-removebg-preview (1).png'; 
+    // default
+    logoElement.src = './Screenshot_2024-01-21_162816-removebg-preview (1).png';
+    labelText.style.color = "#fff"
+ 
   }
 };

@@ -38,7 +38,7 @@ h4{
     align-items: center;
 }
 
-.theme-btn{
+.theme-btn , .select-btn{
   justify-content: space-around;
   background-color: var(--button-color);
   border: 2px solid var(--border-color);
@@ -57,11 +57,16 @@ h4{
   touch-action: manipulation;
 }
 
+
+.select-btn:hover{
+   text-decoration: none;
+}
+
 .theme-btn:hover {
   background-color: var(--button-color);
 }
 
-.theme-btn:active {
+.theme-btn:active, .select-btn:active {
   box-shadow: var(--border-color) 2px 2px 0 0;
   transform: translate(2px, 2px);
 }
@@ -113,6 +118,7 @@ h3 {
     font-size: 2rem;
     white-space: wrap;
     align-items: start!important;
+    text-align: start;
 }
 
 /* eliminating the glow effect  */
@@ -292,4 +298,29 @@ h1 {
     --text-color: #ff0000;
     --button-color: #fff;
     --border-color: #1e375a;
+}
+
+/* page - 2 */
+
+.card-text{
+    color: #000000!important;
+    font-size: 1.2rem;
+    height: 10rem;
+}
+
+.card-img-top{
+    margin-top: .5rem;
+    height: 17rem;
+}
+.card-title{
+    text-align: center;
+    font-weight: bold;
+    color: var(--border-color);
+}
+
+.requirement{
+    /* gap: 8rem; */
+    display: flex;
+    justify-content: space-around!important;
+    margin-top: 5rem;
 }
