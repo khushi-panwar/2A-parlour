@@ -38,7 +38,7 @@ h4{
     align-items: center;
 }
 
-.theme-btn , .select-btn{
+.theme-btn , .select-btn, .arch-btn{
   justify-content: space-around;
   background-color: var(--button-color);
   border: 2px solid var(--border-color);
@@ -57,6 +57,12 @@ h4{
   touch-action: manipulation;
 }
 
+.arch-btn{
+    height: 5rem;
+    color: var(--border-color);
+    margin: 0.5rem 0;
+}
+
 .select-btn:hover, .select-btn:active, a{
    text-decoration: none;
 }
@@ -65,7 +71,7 @@ h4{
   background-color: var(--button-color);
 }
 
-.theme-btn:active, .select-btn:active {
+.theme-btn:active, .select-btn:active, .arch-btn:active{
   box-shadow: var(--border-color) 2px 2px 0 0;
   transform: translate(2px, 2px);
 }
@@ -369,4 +375,14 @@ h1 {
 
 .margin{
     margin-top: 2rem;
+}
+
+textarea{
+    margin-top: 2rem;
+    resize: none;
+    max-width: 50vw!important;
+    background-color: var(--button-color);
+    border: 1px solid var(--border-color);
+    color: var(--border-color);
+    font-size: 2rem;
 }

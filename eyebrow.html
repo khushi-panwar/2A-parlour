@@ -19,7 +19,8 @@
   <body>
     <div class="container">
       <div class="row header">
-        <div class="col-md-6"><!--logo-->
+        <div class="col-md-6">
+          <!--logo-->
           <img
             src="./images/Screenshot_2024-01-21_162816-removebg-preview (1).png"
             alt="logo"
@@ -28,16 +29,59 @@
             class="logo"
           />
         </div>
-        <div class="col-md-6 theme"><!--theme buttons-->
+        <div class="col-md-6 theme">
+          <!--theme buttons-->
           <button class="theme-btn">Light</button>
           <button class="theme-btn">Dark</button>
           <button class="theme-btn">Pink</button>
           <button class="theme-btn">Moonlight</button>
           <button class="theme-btn">Blue</button>
         </div>
-        <div class="row">
-            
+        <div class="row requirement">
+          <div class="card col-md-2">
+            <img src="./images/highArch.png" class="card-img-top" alt="..." />
+            <button class="arch-btn">High Arch</button>
+          </div>
+          <div class="card col-md-2">
+            <img src="./images/softArch.png" class="card-img-top" alt="..." />
+            <button class="arch-btn">Soft Arch</button>
+          </div>
+          <div class="card col-md-2">
+            <img
+              src="./images/straightArch.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <button class="arch-btn">Straight Arch</button>
+          </div>
         </div>
+        <label class="label col-lg-12 margin" for="eyebrow-before"
+          >Q. Have you had eyebrow threading before?</label
+        >
+        <div class="radio-list row" id="eyebrow-before">
+          <div class="radio-item col-md-4">
+            <input name="eyebrow" id="eyebrow-yes" type="radio" /><label
+              for="eyebrow-yes"
+              >Yes</label
+            >
+          </div>
+          <div class="radio-item col-md-4">
+            <input name="eyebrow" id="eyebrow-no" type="radio" /><label
+              for="eyebrow-no"
+              >No</label
+            >
+          </div>
+        </div>
+
+        <label class="label col-md-12 control-label" for="eyebrow-product"
+          >Q. What product would you like to prefer (pencils, gels, etc.)?</label
+        >
+        <textarea
+          rows="4"
+          cols="10"
+          name="eyebrow-product"
+          class="eyebrow-product-textArea margin"
+        ></textarea>
       </div>
     </div>
     <script
