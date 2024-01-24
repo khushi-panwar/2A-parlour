@@ -19,7 +19,8 @@
   <body>
     <div class="container">
       <div class="row header">
-        <div class="col-md-6"><!--logo-->
+        <div class="col-md-6">
+          <!--logo-->
           <img
             src="./images/Screenshot_2024-01-21_162816-removebg-preview (1).png"
             alt="logo"
@@ -28,7 +29,8 @@
             class="logo"
           />
         </div>
-        <div class="col-md-6 theme"><!--theme buttons-->
+        <div class="col-md-6 theme">
+          <!--theme buttons-->
           <button class="theme-btn">Light</button>
           <button class="theme-btn">Dark</button>
           <button class="theme-btn">Pink</button>
@@ -36,7 +38,123 @@
           <button class="theme-btn">Blue</button>
         </div>
         <div class="row">
-            
+          <!-- Select Hair Styling Service -->
+          <label for="hairService" class="label col-md-6 control-label margin"
+            >Hair Styling Service Requested:</label
+          >
+          <select id="hairService" name="hairService" class="col-lg-4 margin" required>
+            <option value="haircut">Haircut</option>
+            <option value="coloring">Coloring</option>
+            <option value="styling">Styling</option>
+            <option value="extensions">Extensions</option>
+          </select>
+        </div>
+
+        <!-- Hair Details -->
+        <div class="row">
+          <h3>Hair Details</h3>
+
+          <label class="label col-lg-6 control-label" for="currentHairLength"
+              >Q. Current hair length:</label
+            >
+          <input
+            type="text"
+            id="currentHairLength"
+            name="currentHairLength"
+            class="col-lg-6 form-control"
+          />
+</div>
+          <label for="hairType">Hair Type:</label>
+          <select id="hairType" name="hairType" class="form-control">
+            <option value="straight">Straight</option>
+            <option value="curly">Curly</option>
+            <option value="wavy">Wavy</option>
+          </select>
+
+          <label for="hairThickness">Hair Thickness/Volume:</label>
+          <input
+            type="text"
+            id="hairThickness"
+            name="hairThickness"
+            class="form-control"
+          />
+
+          <label for="hairColor">Hair Color:</label>
+          <select id="hairColor" name="hairColor" class="form-control">
+            <option value="natural">Natural</option>
+            <option value="dyed">Dyed</option>
+          </select>
+        </div>
+
+        <!-- Haircut Specifics -->
+        <div class="form-group">
+          <h3>Haircut Specifics</h3>
+
+          <label for="desiredHaircutStyle">Desired Haircut Style:</label>
+          <input
+            type="text"
+            id="desiredHaircutStyle"
+            name="desiredHaircutStyle"
+            class="form-control"
+          />
+
+          <label for="referenceImages">Reference Images:</label>
+          <input
+            type="text"
+            id="referenceImages"
+            name="referenceImages"
+            class="form-control"
+          />
+        </div>
+
+        <!-- Coloring/Highlights -->
+        <div class="form-group">
+          <h3>Coloring/Highlights</h3>
+
+          <label for="desiredHairColor">Desired Hair Color:</label>
+          <input
+            type="text"
+            id="desiredHairColor"
+            name="desiredHairColor"
+            class="form-control"
+          />
+
+          <label for="typeOfColoring">Type of Coloring:</label>
+          <input
+            type="text"
+            id="typeOfColoring"
+            name="typeOfColoring"
+            class="form-control"
+          />
+
+          <label for="colorPreferences">Color Preferences/Restrictions:</label>
+          <input
+            type="text"
+            id="colorPreferences"
+            name="colorPreferences"
+            class="form-control"
+          />
+        </div>
+
+        <!-- Hair Styling Preferences -->
+        <div class="form-group">
+          <h3>Hair Styling Preferences</h3>
+
+          <label for="preferredStyling">Preferred Styling:</label>
+          <input
+            type="text"
+            id="preferredStyling"
+            name="preferredStyling"
+            class="form-control"
+          />
+
+          <label for="occasion">Specific Event or Occasion:</label>
+          <input
+            type="text"
+            id="occasion"
+            name="occasion"
+            class="form-control"
+          />
         </div>
       </div>
     </div>

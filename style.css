@@ -337,7 +337,7 @@ h1 {
     margin-top: 5rem;
 }
 
-#skin {
+#skin , #hairService{
     color: #000000;
     border-radius: 30rem;
 }

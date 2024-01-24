@@ -19,7 +19,8 @@
   <body>
     <div class="container">
       <div class="row header">
-        <div class="col-md-6"><!--logo-->
+        <div class="col-md-6">
+          <!--logo-->
           <img
             src="./images/Screenshot_2024-01-21_162816-removebg-preview (1).png"
             alt="logo"
@@ -28,7 +29,8 @@
             class="logo"
           />
         </div>
-        <div class="col-md-6 theme"><!--theme buttons-->
+        <div class="col-md-6 theme">
+          <!--theme buttons-->
           <button class="theme-btn">Light</button>
           <button class="theme-btn">Dark</button>
           <button class="theme-btn">Pink</button>
@@ -36,7 +38,52 @@
           <button class="theme-btn">Blue</button>
         </div>
         <div class="row">
-            
+          <label class="col-lg-6 label control-label" for="product-allergy"
+            >Q. Do you have any allergies, especially to products used in
+            waxing?</label
+          >
+          <div class="col-lg-6">
+            <input type="text" class="form-control" required />
+          </div>
+        </div>
+        <div class="row">
+          <label class="col-lg-6 label control-label" for="product-allergy"
+            >Q. Have you experienced any skin conditions or irritations recently?</label
+          >
+          <div class="col-lg-6">
+            <input type="text" class="form-control" required />
+          </div>
+        </div>
+        <div class="row">
+          <label class="col-lg-6 label control-label" for="area-waxing"
+            >Q. Which areas are you interested in waxing? (e.g., legs, arms, underarms, bikini, face)</label
+          >
+          <div class="col-lg-6">
+            <input type="text" class="form-control" id="area-waxing" required />
+          </div>
+        </div>
+        <div class="row">
+          <label class="col-lg-6 label control-label" for="post-wax-concerns"
+            >Q. Do you have any questions or concerns about post-waxing care?</label
+          >
+          <div class="col-lg-6">
+            <input type="text" class="form-control" id="post-wax-concerns" required />
+          </div>
+          <label class="col-lg-6 label control-label" for="hair-length"
+            >Q. Is your hair at the desired length for waxing (typically around 1/4 to 1/2 inch)?</label
+          >
+          <div class="radio-item col-md-4" id="hair-length">
+            <input name="eyebrow" id="hairLength-yes" type="radio" /><label
+              for="hairLength-yes"
+              >Yes</label
+            >
+          </div>
+          <div class="radio-item col-md-4">
+            <input name="eyebrow" id="hairLength-no" type="radio" /><label
+              for="hairLength-no"
+              >No</label
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -46,5 +93,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="script.js"></script>
+    <script src="./waxing.script.js"></script>
   </body>
 </html>

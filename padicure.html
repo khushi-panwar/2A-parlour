@@ -19,7 +19,8 @@
   <body>
     <div class="container">
       <div class="row header">
-        <div class="col-md-6"><!--logo-->
+        <div class="col-md-6">
+          <!--logo-->
           <img
             src="./images/Screenshot_2024-01-21_162816-removebg-preview (1).png"
             alt="logo"
@@ -28,7 +29,8 @@
             class="logo"
           />
         </div>
-        <div class="col-md-6 theme"><!--theme buttons-->
+        <div class="col-md-6 theme">
+          <!--theme buttons-->
           <button class="theme-btn">Light</button>
           <button class="theme-btn">Dark</button>
           <button class="theme-btn">Pink</button>
@@ -36,7 +38,91 @@
           <button class="theme-btn">Blue</button>
         </div>
         <div class="row">
-            
+          <label class="label col-md-12 control-label"
+            >Q. Type of Nail Shape?</label
+          >
+          <div class="radio-section">
+            <div class="radio-list row">
+              <div class="radio-item time col-md-4">
+                <input name="nail-shape" id="round" type="radio" /><label
+                  for="round"
+                  >Round</label
+                >
+              </div>
+              <div class="radio-item time col-md-4">
+                <input name="nail-shape" id="oval" type="radio" /><label
+                  for="oval"
+                  >Oval</label
+                >
+              </div>
+              <div class="radio-item time col-md-4">
+                <input name="nail-shape" id="square" type="radio" /><label
+                  for="square"
+                  >Square</label
+                >
+              </div>
+            </div>
+            <label class="label col-md-12 control-label" for="manicureType"
+              >Q. Type of padicure you prefer (e.g., Basic, Gel, Acrylic)</label
+            >
+            <textarea
+              rows="2"
+              cols="50"
+              name="manicureType"
+              class="manicureType-textArea margin"
+            ></textarea>
+            <label class="label col-md-12 control-label" for="polish"
+              >Q. Preferred Nail Polish Color?</label
+            >
+            <textarea
+              rows="2"
+              cols="50"
+              name="polish"
+              class="polish-textArea margin"
+            ></textarea>
+            <label class="label col-md-12 control-label" for="art-preference"
+              >Q. Nail Art Preferences (if any)</label
+            >
+            <input type="file" name="art-preference" id="art-preference" />
+            <label class="label col-md-12 control-label" for="polish"
+              >Q.Comfort Preferences?</label>
+              <div class="radio-list row" id="nail-art">
+                <div class="radio-item col-md-4">
+                  <input name="eyebrow" id="nail-yes" type="radio" /><label
+                    for="nail-yes"
+                    >Yes</label
+                  >
+                </div>
+                <div class="radio-item col-md-4">
+                  <input name="eyebrow" id="nail-no" type="radio" /><label
+                    for="nail-no"
+                    >No</label
+                  >
+                </div>
+              </div>
+            <label class="label col-md-12 control-label" for="massage"
+              >Q. Hand Massage Preferences (e.g., Light, Medium, Firm)</label
+            >
+              <div class="radio-list row" id="massage">
+                <div class="radio-item col-md-4">
+                  <input name="eyebrow" id="light" type="radio" /><label
+                    for="light"
+                    >Light</label
+                  >
+                </div>
+                <div class="radio-item col-md-4">
+                  <input name="eyebrow" id="medium" type="radio" /><label
+                    for="medium"
+                    >Medium</label
+                  >
+                </div>
+                <div class="radio-item col-md-4">
+                  <input name="eyebrow" id="firm" type="radio" /><label
+                    for="firm"
+                    >Firm</label
+                  >
+                </div>
+          </div>
         </div>
       </div>
     </div>
@@ -46,5 +132,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="script.js"></script>
+    <script src="./padicure.script.js"></script>
   </body>
 </html>
