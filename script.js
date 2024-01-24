@@ -54,17 +54,4 @@ function updateLogo(theme) {
   }
 };
 
-// text area input fullmakeup page 
-// // // outfit pic upload 
-//   let Input = document.querySelector(".outfit-textArea");
-//   console.log(Input.textContent);
 
-// // getting yes and no and option from fullmakeup page 
-// const accessories = document.getElementById('accessories')
-// let countAccessories = accessories.children;
-// for (let item of countAccessories) {//iteration on HTMLcollection
-//   console.log(item.textContent);
-//   if (item.textContent === "No") {
-//     console.log("entered");
-//   }
-// }
