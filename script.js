@@ -1,6 +1,5 @@
 
 
-// changing the themes of web page
 document.addEventListener('DOMContentLoaded', function () {
   // Get theme buttons
   const themeButtons = document.querySelectorAll('.theme-btn');
@@ -12,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.className = savedTheme;
   }
 
+  // changing the themes of web page
   themeButtons.forEach(function (button) {
     button.addEventListener('click', function () {
       // Get button text content
@@ -20,30 +20,51 @@ document.addEventListener('DOMContentLoaded', function () {
       // Save the selected theme to local storage
       localStorage.setItem('selectedTheme', `theme-${theme}`);
 
-      // Change the logo based on the selected theme
+      // Change the logo on selected theme
       updateLogo(theme);
     });
   });
+
+
 });
 
-// logo changing functionality
+// logo and labelText changing functionality
 function updateLogo(theme) {
   const logoElement = document.querySelector('.logo');
-  const labelText = document.querySelector('.label')
-  console.log(logoElement);
-  console.log(labelText);
+  const labelText = document.querySelectorAll('.label')
 
-  
-  if (theme === 'blue' ) {
-    logoElement.src = './Screenshot_2024-01-21_162256-removebg.png'; 
-    labelText.style.color = "#000"
-  } else if (theme === 'pink' ) {
-    logoElement.src = './Screenshot_2024-01-21_162256-removebg.png'; 
-    labelText.style.color = "#000"
+  if (theme === 'blue') {
+    logoElement.src = './images/Screenshot_2024-01-21_162256-removebg.png';
+
+    labelText.forEach((val) => {
+      val.style.color = "black";
+    });
+  } else if (theme === 'pink') {
+    logoElement.src = './images/Screenshot_2024-01-21_162256-removebg.png';
+
+    labelText.forEach((val) => {
+      val.style.color = "black";
+    });
   } else {
     // default
-    logoElement.src = './Screenshot_2024-01-21_162816-removebg-preview (1).png';
-    labelText.style.color = "#fff"
- 
+    logoElement.src = './images/Screenshot_2024-01-21_162816-removebg-preview (1).png';
+    labelText.forEach((val) => {
+      val.style.color = "#fff";
+    });
   }
 };
+
+// text area input fullmakeup page 
+// // // outfit pic upload 
+//   let Input = document.querySelector(".outfit-textArea");
+//   console.log(Input.textContent);
+
+// // getting yes and no and option from fullmakeup page 
+// const accessories = document.getElementById('accessories')
+// let countAccessories = accessories.children;
+// for (let item of countAccessories) {//iteration on HTMLcollection
+//   console.log(item.textContent);
+//   if (item.textContent === "No") {
+//     console.log("entered");
+//   }
+// }
