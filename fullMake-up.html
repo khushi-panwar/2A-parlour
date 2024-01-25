@@ -50,11 +50,11 @@
       <div class="row color">
         <label class="label col-lg-6" for="skin">Q. What skin color you have ?</label>
         <div class="palette col-lg-6">
-          <div class="option ffdbac" id="skin"></div>
-          <div class="option f1c27d" id="skin"></div>
-          <div class="option e0ac69" id="skin"></div>
-          <div class="option c68642" id="skin"></div>
-          <div class="option a8d5524" id="skin"></div>
+          <div class="option ffdbac" id="skin" onclick="skinColor('ffdbac')"></div>
+          <div class="option f1c27d" id="skin" onclick="skinColor('f1c27d')"></div>
+          <div class="option e0ac69" id="skin" onclick="skinColor('e0ac69')"></div>
+          <div class="option c68642" id="skin" onclick="skinColor('c68642')"></div>
+          <div class="option a8d5524" id="skin" onclick="skinColor('a8d5524')"></div>
         </div>
       </div>
       <div class="row color">
@@ -66,7 +66,7 @@
               class="card-img-top"
               alt="..."
             />
-            <p class="card-title">Straight hair</p>
+            <button class="hair-btn" onclick="validateHairType('straightHair')">Straight Hair</button>
           </div>
           <div class="card col-md-2">
             <img
@@ -74,28 +74,31 @@
               class="card-img-top"
               alt="..."
             />
-            <p class="card-title">Curly hair</p>
+            <button class="hair-btn" onclick="validateHairType('curlyHair')">Curly Hair</button>
           </div>
           <div class="card col-md-2">
             <img
               src="./images/coilyHair.png"
               class="card-img-top"
               alt="..."
-            /><p class="card-title">Coily hair</p>
+            />
+            <button class="hair-btn" onclick="validateHairType('coilyHair')">Coily Hair</button>
           </div>
           <div class="card col-md-2">
             <img
               src="./images/wavyHaior.png"
               class="card-img-top"
               alt="..."
-            /><p class="card-title">Wavy hair</p>
+            />
+            <button class="hair-btn" onclick="validateHairType('wavyHair')">Wavy Hair</button>
           </div>
           <div class="card col-md-2">
             <img
               src="./images/curlyToStraightHair.png"
               class="card-img-top"
               alt="..."
-            /><p class="card-title">Curly to Straight</p>
+            />
+            <button class="hair-btn" onclick="validateHairType('curlyToStraightHair')">Curly To Straight </button>
           </div>
       </div>
       <!-- outfit -->
@@ -105,11 +108,19 @@
       <!-- accessories -->
       <label class="label col-md-12 control-label" for="accessories">Q. Do you have matching jewellery?</label>
         <div class="radio-list row" id="accessories">
-          <div class="radio-item time col-md-4" ><input name="radio" id="yes" type="radio"><label for="yes">Yes</label></div>
-          <div class="radio-item time col-md-4"><input name="radio" id="no" type="radio"><label for="no">No</label></div>
+          <div class="radio-item col-md-4" ><input name="radio" id="yes" type="radio"><label for="yes">Yes</label></div>
+          <div class="radio-item col-md-4"><input name="radio" id="no" type="radio"><label for="no">No</label></div>
         </div>
-        <input type="submit" value="Submit" onclick="validateFullMakeUp()">
-
+     <div class="accessories-label">
+      <label class="label col-md-12 control-label"  for="accessories-description">Q. Can you descript?</label>
+      <div class="radio-list row" id="accessories-description">
+        <div class="radio-item col-md-4" ><input name="accessories-description" id="description" type="text"></div>
+        <div class="radio-item col-md-4"><input name="accessories-pic" id="accessories-pic" type="file"></div>
+      </div>
+    </div>
+    <div>
+        <input type="submit" class="margin" value="Submit" onclick="validateFullMakeUp()">
+      </div>
       
     </div>
     <script

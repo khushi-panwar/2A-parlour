@@ -10,11 +10,11 @@ function validateFacial() {
     }
 
     // Validate skin color selection
-    var skinColor = document.querySelector(".palette input:checked");
-    if (!skinColor) {
-        alert("Please select your skin color.");
-        return false;
-    }
+    // var skinColor = document.querySelector(".palette input:checked");
+    // if (!skinColor) {
+    //     alert("Please select your skin color.");
+    //     return false;
+    // }
 
     // Validate skin concerns textarea
     var skinConcern = document.getElementById("skin-concern").value.trim();

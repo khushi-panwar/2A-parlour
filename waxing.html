@@ -51,7 +51,7 @@
             >Q. Have you experienced any skin conditions or irritations recently?</label
           >
           <div class="col-lg-6">
-            <input type="text" class="form-control" required />
+            <input type="text" class="form-control" id="product-allergy" required />
           </div>
         </div>
         <div class="row">
@@ -69,21 +69,22 @@
           <div class="col-lg-6">
             <input type="text" class="form-control" id="post-wax-concerns" required />
           </div>
-          <label class="col-lg-6 label control-label" for="hair-length"
+          <label class="col-lg-12 label control-label" for="hair-length"
             >Q. Is your hair at the desired length for waxing (typically around 1/4 to 1/2 inch)?</label
           >
-          <div class="radio-item col-md-4" id="hair-length">
+          <div class="radio-item col-lg-4" id="hair-length">
             <input name="eyebrow" id="hairLength-yes" type="radio" /><label
               for="hairLength-yes"
               >Yes</label
             >
           </div>
-          <div class="radio-item col-md-4">
+          <div class="radio-item col-lg-4">
             <input name="eyebrow" id="hairLength-no" type="radio" /><label
               for="hairLength-no"
               >No</label
             >
           </div>
+          <input type="submit" value="Submit" onclick="validateWaxing()">
         </div>
       </div>
     </div>

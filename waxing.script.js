@@ -1,7 +1,8 @@
-document.addEventListener("DOMContentLoaded", function () {
+
     // Function to validate the form
-    function validateForm() {
-      var productAllergy = document.getElementById("product-allergy").value;
+    function validateWaxing() {
+      // var productAllergy = document.getElementById("product-allergy");
+      // console.log(productAllergy);
       var skinConditions = document.getElementById("skin-conditions").value;
       var areaWaxing = document.getElementById("area-waxing").value;
       var postWaxConcerns = document.getElementById("post-wax-concerns").value;
@@ -32,13 +33,4 @@ document.addEventListener("DOMContentLoaded", function () {
       var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailRegex.test(email);
     }
-  
-    // Attach the validation function to the form's submit event
-    var form = document.querySelector("form");
-    form.addEventListener("submit", function (event) {
-      if (!validateForm()) {
-        event.preventDefault(); // Prevent form submission if validation fails
-      }
-    });
-  });
   
