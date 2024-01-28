@@ -30,8 +30,11 @@ function validateEyebrow() {
     }
 
     // If all validations pass
-    alert("Form submitted successfully!");
-    return true;
+    Swal.fire({
+        title: "Submitted",
+        text: "successfully!",
+        icon: "success"
+    });
 }
 
 function eyebrowArch(archVal) {

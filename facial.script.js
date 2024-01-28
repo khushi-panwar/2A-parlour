@@ -55,6 +55,10 @@ function validateFacial() {
     }
 
     // If all validations pass, the form is valid
-    alert("Form submitted successfully!");
+    Swal.fire({
+        title: "Submitted",
+        text: "successfully!",
+        icon: "success"
+    });
     return true;
 }

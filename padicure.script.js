@@ -1,9 +1,11 @@
-// Function to validate the form
+
+
+
 function validatePadicure() {
   // Validate Nail Shape selection
-  var nailShapeRadios = document.getElementsByName("nail-shape");
-  var nailShapeSelected = false;
-  for (var i = 0; i < nailShapeRadios.length; i++) {
+  let nailShapeRadios = document.getElementsByName("nail-shape");
+  let nailShapeSelected = false;
+  for (let i = 0; i < nailShapeRadios.length; i++) {
     if (nailShapeRadios[i].checked) {
       nailShapeSelected = true;
       break;
@@ -11,55 +13,43 @@ function validatePadicure() {
   }
   if (!nailShapeSelected) {
     alert("Please select a Nail Shape.");
-    return false;
+    return;
   }
 
   // Validate textarea inputs
-  var manicureType = document.querySelector("textarea[name='manicureType']").value;
-  var polish = document.querySelector("textarea[name='polish']").value;
+  let manicureType = document.querySelector("textarea[name='manicureType']").value;
+  let polish = document.querySelector("textarea[name='polish']").value;
 
   if (!manicureType || !polish) {
     alert("Please fill in all the textarea fields.");
-    return false;
+    return;
   }
 
   // Validate file upload
-  var artPreferenceFile = document.getElementById("art-preference");
+  let artPreferenceFile = document.getElementById("art-preference");
   if (artPreferenceFile.value) {
-    var allowedExtensions = /(\.jpg|\.jpeg|\.png)$/i;
+    let allowedExtensions = /(\.jpg|\.jpeg|\.png)$/i;
     if (!allowedExtensions.exec(artPreferenceFile.value)) {
       alert("Please upload a file with a valid extension (.jpg, .jpeg, .png).");
-      return false;
+      return;
     }
   }
 
-  // If all validations pass, the form is valid
-  alert("Form submitted successfully!");
-  return true;
+  let massageLight = document.getElementById('light').checked;
+  let massageMedium = document.getElementById('medium').checked;
+  let massageFirm = document.getElementById('firm').checked;
 
-//   // Validate radio button selections
-//   if (!validateRadioGroup("nail-art")) {
-//     alert("Please select your Nail Art preference.");
-//     return false;
-//   }
-
-//   if (!validateRadioGroup("massage")) {
-//     alert("Please select your Hand Massage preference.");
-//     return false;
-//   }
-
-//   return true; // Form is valid
-// }
-
-// // Function to validate radio button selection in a group
-// function validateRadioGroup(groupName) {
-//   var radioGroup = document.getElementsByName(groupName);
-//   for (var i = 0; i < radioGroup.length; i++) {
-//     if (radioGroup[i].checked) {
-//       return true; // At least one option is selected
-//     }
-//   }
-//   return false; // No option is selected
+  console.log(massageLight, massageMedium, massageFirm);
+  if (!massageLight && !massageMedium && !massageFirm) {
+    alert("Please select a Hand Massage Preference.");
+    return;
+  }
+  Swal.fire({
+    title: "Submitted",
+    text: "successfully!",
+    icon: "success"
+});
+  return;
 }
 
 

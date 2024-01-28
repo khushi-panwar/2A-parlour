@@ -1,7 +1,7 @@
 let accessoriesPic = document.getElementById("accessories-pic");
 let accessoriesDescription = document.getElementById("description");
 let accessoriesDiv = document.querySelector(".accessories-label");
-var accessoriesYes = document.getElementById("yes");
+let accessoriesYes = document.getElementById("yes");
 
 accessoriesYes.addEventListener("click", ()=>{
   accessoriesPic.style.display = "block"
@@ -25,15 +25,15 @@ function validateFullMakeUp() {
   }
 
   // Validate hair type selection
-  // var hairTypeCards = document.querySelectorAll(".row.requirement .card input:checked");
+  // let hairTypeCards = document.querySelectorAll(".row.requirement .card input:checked");
   // if (hairTypeCards.length === 0) {
   //   alert("Please select your hair type.");
   //   return false;
   // }
 
   // Validate outfit description and color
-  var outfitDescription = document.querySelector("textarea[name='outfit']").value.trim();
-  var outfitFile = document.querySelector("input[name='outfit']").value.trim();
+  let outfitDescription = document.querySelector("textarea[name='outfit']").value.trim();
+  let outfitFile = document.querySelector("input[name='outfit']").value.trim();
   if (outfitDescription === "" && outfitFile === "") {
     alert("Please provide your outfit description or upload an outfit image.");
     return false;
@@ -41,7 +41,7 @@ function validateFullMakeUp() {
 
   // Validate accessories selection
 
-  var accessoriesNo = document.getElementById("no").checked;
+  let accessoriesNo = document.getElementById("no").checked;
   if (!accessoriesYes && !accessoriesNo) {
     alert("Please select whether you have matching jewellery.");
     return false;
@@ -54,7 +54,11 @@ function validateFullMakeUp() {
   }
 
   // If all validations pass, the form is valid
-  alert("Form submitted successfully!");
+  Swal.fire({
+    title: "Submitted",
+    text: "successfully!",
+    icon: "success"
+});
   return true;
 }
 

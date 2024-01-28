@@ -1,10 +1,10 @@
 function validateWaxing() {
   // Get the values of the form fields
-  var allergy = document.getElementById('product-allergy').value;
-  var waxingAreas = document.getElementById('area-waxing').value;
-  var postWaxConcerns = document.getElementById('post-wax-concerns').value;
-  var hairLengthYes = document.getElementById('hairLength-yes').checked;
-  var hairLengthNo = document.getElementById('hairLength-no').checked;
+  let allergy = document.getElementById('product-allergy').value;
+  let waxingAreas = document.getElementById('area-waxing').value;
+  let postWaxConcerns = document.getElementById('post-wax-concerns').value;
+  let hairLengthYes = document.getElementById('hairLength-yes').checked;
+  let hairLengthNo = document.getElementById('hairLength-no').checked;
 
 // if null , then show an error
   if (allergy === ''  || waxingAreas === '' || postWaxConcerns === '') {
@@ -17,6 +17,10 @@ function validateWaxing() {
       return ;
   }
 
-  alert('Form submitted successfully!');
+  Swal.fire({
+    title: "Submitted",
+    text: "successfully!",
+    icon: "success"
+});
 }
 
