@@ -1,36 +1,22 @@
+function validateWaxing() {
+  // Get the values of the form fields
+  var allergy = document.getElementById('product-allergy').value;
+  var waxingAreas = document.getElementById('area-waxing').value;
+  var postWaxConcerns = document.getElementById('post-wax-concerns').value;
+  var hairLengthYes = document.getElementById('hairLength-yes').checked;
+  var hairLengthNo = document.getElementById('hairLength-no').checked;
 
-    // Function to validate the form
-    function validateWaxing() {
-      // var productAllergy = document.getElementById("product-allergy");
-      // console.log(productAllergy);
-      var skinConditions = document.getElementById("skin-conditions").value;
-      var areaWaxing = document.getElementById("area-waxing").value;
-      var postWaxConcerns = document.getElementById("post-wax-concerns").value;
-      var hairLengthYes = document.getElementById("hairLength-yes");
-      var hairLengthNo = document.getElementById("hairLength-no");
-  
-      // Complex validations
-      if (!productAllergy || !skinConditions || !areaWaxing || !postWaxConcerns) {
-        alert("Please fill in all the required fields.");
-        return false;
-      }
-  
-      if (!validateEmail(productAllergy)) {
-        alert("Please enter a valid email address for product allergies.");
-        return false;
-      }
-  
-      if (hairLengthYes.checked || hairLengthNo.checked) {
-        return true; // Either option is selected
-      } else {
-        alert("Please select whether your hair is at the desired length for waxing.");
-        return false;
-      }
-    }
-  
-    // Function to validate email format
-    function validateEmail(email) {
-      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return emailRegex.test(email);
-    }
-  
+// if null , then show an error
+  if (allergy === ''  || waxingAreas === '' || postWaxConcerns === '') {
+      alert('Please fill out all the required fields.');
+      return ;
+  }
+
+  if (!hairLengthYes && !hairLengthNo) {
+      alert('Please select if your hair is at the desired length for waxing.');
+      return ;
+  }
+
+  alert('Form submitted successfully!');
+}
+

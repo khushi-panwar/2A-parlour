@@ -408,3 +408,13 @@ textarea{
     display: none;
 }
 
+.eyebrowProduct{
+    display: none;
+}
+
+.backGround {
+    position: fixed;
+    top: 12rem;
+    z-index: -1;
+    left: 60%;
+}

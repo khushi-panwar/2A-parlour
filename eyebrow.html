@@ -18,7 +18,7 @@
   </head>
   <body>
     <div class="container">
-      <div class="row header">
+      <div class="backGround"><img src="./images/output_image.png" width="500" height="500"></div>      <div class="row header">
         <div class="col-md-6">
           <!--logo-->
           <img
@@ -40,11 +40,11 @@
         <div class="row requirement">
           <div class="card col-md-2">
             <img src="./images/highArch.png" class="card-img-top" alt="..." />
-            <button class="arch-btn">High Arch</button>
+            <button class="arch-btn" onclick="eyebrowArch('high')">High Arch</button>
           </div>
           <div class="card col-md-2">
             <img src="./images/softArch.png" class="card-img-top" alt="..." />
-            <button class="arch-btn">Soft Arch</button>
+            <button class="arch-btn" onclick="eyebrowArch('soft')">Soft Arch</button>
           </div>
           <div class="card col-md-2">
             <img
@@ -52,7 +52,7 @@
               class="card-img-top"
               alt="..."
             />
-            <button class="arch-btn">Straight Arch</button>
+            <button class="arch-btn" onclick="eyebrowArch('straight')">Straight Arch</button>
           </div>
         </div>
         <label class="label col-lg-12 margin" for="eyebrow-before"
@@ -73,7 +73,8 @@
           </div>
         </div>
 
-        <label class="label col-md-12 control-label" for="eyebrow-product"
+        <div class="eyebrowProduct">
+          <label class="label col-md-12 control-label" for="eyebrow-product"
           >Q. What product would you like to prefer (pencils, gels, etc.)?</label
         >
         <textarea
@@ -83,9 +84,10 @@
           class="eyebrow-product-textArea margin"
         ></textarea>
         
+        </div>
       </div>
-      <div>
-        <input type="submit" value="Submit" onclick="">
+      <div class="margin">
+        <input type="submit" value="Submit" onclick="validateEyebrow()">
       </div>
     </div>
     <script
@@ -94,5 +96,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="script.js"></script>
+    <script src="./eyebrow.script.js"></script>
   </body>
 </html>
