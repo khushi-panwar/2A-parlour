@@ -21,15 +21,14 @@ document.addEventListener('DOMContentLoaded', function () {
       localStorage.setItem('selectedTheme', `theme-${theme}`);
 
       // Change the logo on selected theme
-      updateLogo(theme);
+      updateChanges(theme);
     });
   });
-
 
 });
 
 // logo and labelText changing functionality
-function updateLogo(theme) {
+function updateChanges(theme) {
   const logoElement = document.querySelector('.logo');
   const labelText = document.querySelectorAll('.label')
 
