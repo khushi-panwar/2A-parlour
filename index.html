@@ -30,6 +30,7 @@
           <button class="theme-btn">Blue</button>
         </div>
       </div>
+        <div class="backGround" style="left: 70%;"><img src="./images/output_image.png" width="500" height="500" ></div>
       <div class="row">
         <div class="col-md-5">
           <h1 class="text-left">Beauty Parlor Form</h1>
@@ -60,7 +61,7 @@
             </div>
             <label class="label col-md-3 control-label" >Phone No.</label>
             <div class="col-md-9">
-                <input type="text" class="form-control" name="phone" pattern="[0-9]{10}"  placeholder="Phone No" required>
+                <input type="text" class="form-control" name="phone" pattern="[0-9]{10}" maxlength="10" placeholder="Phone No" required>
             </div>
             <label class="label col-md-3 control-label">Address</label>
             <div class="col-md-9">
@@ -113,8 +114,10 @@
           </div>
         </div>
         
-      </div>
-      <button type="submit" id="submit">Next</button>        
+      </div >
+      <div  style="float: right;">
+      <button type="submit" id="submit">Next</button>    
+      </div>    
       </div>
     </div>
     </div>

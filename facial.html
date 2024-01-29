@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./images/Screenshot_2024-01-21_185556-removebg-preview.png">
     <title>Beauty Parlor Form</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -56,21 +57,25 @@
           <div class="option c68642" onclick="skinColor('c68642')"></div>
           <div class="option a8d5524" onclick="skinColor('a8d5524')"></div>
         </div>
-        <label class="label col-lg-12 margin" for="skin-concern">Q. Do you have any specific skin concerns or issues? (e.g., acne, aging, pigmentation)</label>
-        <textarea name="skin-concern" id="skin-concern" cols="10" rows="5"></textarea>
-        <label class="label col-lg-12 margin" for="skin-routine">Q. What is your current skincare routine? Please list any products you are currently using.</label>
-        <textarea name="skin-routine" id="skin-routine" cols="10" rows="5"></textarea>
-        <label class="label col-lg-12 margin" for="skin-allergy">Q. Are you allergic to any specific skincare ingredients or products?</label>
+        <label class="label col-lg-9 margin" for="skin-concern">Q. Do you have any specific skin concerns or issues? (e.g., acne, aging, pigmentation)</label>
+        <textarea name="skin-concern" id="skin-concern" cols="10" rows="2"></textarea>
+        <label class="label col-lg-9 margin" for="skin-routine">Q. What is your current skincare routine? Please list any products you are currently using.</label>
+        <textarea name="skin-routine" id="skin-routine" cols="10" rows="2"></textarea>
+        <label class="label col-lg-9 margin" for="skin-allergy">Q. Are you allergic to any specific skincare ingredients or products?</label>
         <div class="radio-list row" id="skin-allergy">
             <div class="radio-item col-md-4" ><input name="allergy" id="yes" type="radio"><label for="yes">Yes</label></div>
             <div class="radio-item col-md-4"><input name="allergy" id="no" type="radio"><label for="no">No</label></div>
         </div>
-        <label class="label col-lg-12 margin" for="skin-preference">Q. Do you have preferences for specific skincare product brands or types?</label>
+      <div class="allergy-yes">  <label class="label col-lg-9 margin" for="allergy-yes">Q. Can you elaborate?</label>
+        <textarea name="allergy-yes" id="allergy-yes" cols="50" rows="2"></textarea></div>
+        <label class="label col-lg-9 margin" for="skin-preference">Q. Do you have preferences for specific skincare product brands or types?</label>
         <div class="radio-list row" id="skin-preference">
             <div class="radio-item col-lg-4" ><input name="preference" id="yes1" type="radio"><label for="yes1">Yes</label></div>
             <div class="radio-item col-lg-4"><input name="preference" id="no1" type="radio"><label for="no1">No</label></div>
         </div>
-        <label class="label col-lg-12 margin" for="skin-preference">Q. Would you be comfortable with the esthetician taking before-and-after photos for documentation or promotional purposes?</label>
+        <div class="name-preference"><label class="label col-lg-9 margin" for="name-preference">Q. Can you name them ?</label>
+          <textarea name="name-preference" id="name-preference" cols="50" rows="2"></textarea></div>
+        <label class="label col-lg-9 margin" for="skin-preference">Q. Would you be comfortable with the esthetician taking before-and-after photos for documentation or promotional purposes?</label>
         <div class="radio-list row" id="skin-preference">
             <div class="radio-item col-md-4" ><input name="photo" id="yes2" type="radio"><label for="yes2">Yes</label></div>
             <div class="radio-item col-md-4"><input name="photo" id="no2" type="radio"><label for="no2">No</label></div>
@@ -78,7 +83,9 @@
     </div>
 
       </div>
-        <input type="submit" onclick="validateFacial()" value="Submit">
+      <div class="margin">
+        <input type="submit" class="submit" onclick="validateFacial()" value="Submit">
+      </div>
       </div>
     </div>
 

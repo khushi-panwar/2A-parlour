@@ -3,7 +3,7 @@ let accessoriesDescription = document.getElementById("description");
 let accessoriesDiv = document.querySelector(".accessories-label");
 let accessoriesYes = document.getElementById("yes");
 
-accessoriesYes.addEventListener("click", ()=>{
+accessoriesYes.addEventListener("click", () => {
   accessoriesPic.style.display = "block"
   accessoriesDescription.style.display = "block"
   accessoriesDiv.style.display = "block"
@@ -46,19 +46,19 @@ function validateFullMakeUp() {
     alert("Please select whether you have matching jewellery.");
     return false;
   }
-  // console.log(accessoriesYes)
 
-  if(accessoriesDescription.value.trim() === ""){
-    alert("can not be empty")
-    return;
+  if (accessoriesYes === 'yes') {
+    if (accessoriesDescription.value.trim() === "") {
+      alert("can not be empty")
+      return;
+    }
   }
-
   // If all validations pass, the form is valid
   Swal.fire({
     title: "Submitted",
     text: "successfully!",
     icon: "success"
-});
+  });
   return true;
 }
 
@@ -67,7 +67,7 @@ function validateHairType(hairType) {
   console.log(hairtype)
 }
 
-function skinColor(color){
-  skincolor= color;
+function skinColor(color) {
+  skincolor = color;
   console.log(skincolor);
 }
