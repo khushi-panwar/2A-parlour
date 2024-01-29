@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', function () {
   // If a theme is saved, apply it
   if (savedTheme) {
     document.body.className = savedTheme;
+    let updatedTextTheme = savedTheme.split('-')[1]
+    updateChanges(updatedTextTheme)
+
   }
 
   // changing the themes of web page
