@@ -31,9 +31,20 @@ nextBtn.addEventListener('click', function (event) {
     alert('Email address should not be blank and must end with @gmail.com.');
     return;
   }
+  if (!validateEmail(emailValue)) {
+    console.log("entered");
+    alert('Only @ and dot(.) is allowed');
+    return;
+  }
+// validation for Email
+  function validateEmail(email) {
+    console.log("entered in regex");
+    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return regex.test(email);
+  }
 
   // Validation for Phone No.
-  var phone = document.querySelector('input[name="phone"]').value;
+  let phone = document.querySelector('input[name="phone"]').value;
 
   if (phone.trim() === '' || !isValidPhone(phone)) {
     alert('Please enter a valid Phone Number');
@@ -41,43 +52,43 @@ nextBtn.addEventListener('click', function (event) {
   }
 
   function isValidPhone(phone) {
-    var phoneRegex = /^\d{10}$/;
+    let phoneRegex = /^\d{10}$/;
     return phoneRegex.test(phone);
   }
 
   // Validation for Address
-  var address = document.querySelector('input[name="address"]').value;
+  let address = document.querySelector('input[name="address"]').value;
   if (address.trim() === '') {
     alert('Please enter your Address');
-    return ;
+    return;
   }
 
-  var selectedDay = document.querySelector('input[name="radio"]:checked');
-    if (!selectedDay) {
-      alert('Please select a day for the appointment.');
-      return ;
-    }
+  let selectedDay = document.querySelector('input[name="radio"]:checked');
+  if (!selectedDay) {
+    alert('Please select a day for the appointment.');
+    return;
+  }
 
-    // Validate radio buttons for specific time
-    var selectedTime = document.querySelector('input[name="radio1"]:checked');
-    if (!selectedTime) {
-      alert('Please select a time for the appointment.');
-      return;
-    }
+  // Validate radio buttons for specific time
+  let selectedTime = document.querySelector('input[name="radio1"]:checked');
+  if (!selectedTime) {
+    alert('Please select a time for the appointment.');
+    return;
+  }
 
-    // Validate date/time
-    var selectedDateTime = document.querySelector('input[name="dateTime"]').value;
-    if (selectedDateTime.trim() === '') {
-      alert('Please select a date and time for the appointment.');
-      return;
-    }
+  // Validate date/time
+  let selectedDateTime = document.querySelector('input[name="dateTime"]').value;
+  if (selectedDateTime.trim() === '') {
+    alert('Please select a date and time for the appointment.');
+    return;
+  }
 
-    // Validate radio buttons for how they heard about you
-    var selectedHeard = document.querySelector('input[name="heard"]:checked');
-    if (!selectedHeard) {
-      alert('Please select how you heard about us.');
-      return;
-    }
+  // Validate radio buttons for how they heard about you
+  let selectedHeard = document.querySelector('input[name="heard"]:checked');
+  if (!selectedHeard) {
+    alert('Please select how you heard about us.');
+    return;
+  }
 
 
   // If validations pass, redirect to page2

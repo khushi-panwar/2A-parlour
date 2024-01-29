@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.className = savedTheme;
     let updatedTextTheme = savedTheme.split('-')[1]
     updateChanges(updatedTextTheme)
-
   }
 
   // changing the themes of web page
