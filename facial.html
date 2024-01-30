@@ -46,7 +46,8 @@
             <option value="oily" de>Oily skin</option>
             <option value="dry">Dry skin</option>
             <option value="normal" selected>Normal skin</option>
-        </select>
+          </select>
+          <div class="error"></div>
       </div>
       <div class="row color">
         <label class="label col-lg-6 " for="skin">Q. What skin color you have ?</label>
@@ -59,12 +60,15 @@
         </div>
         <label class="label col-lg-9 margin" for="skin-concern">Q. Do you have any specific skin concerns or issues? (e.g., acne, aging, pigmentation)</label>
         <textarea name="skin-concern" id="skin-concern" cols="10" rows="2"></textarea>
-        <label class="label col-lg-9 margin" for="skin-routine">Q. What is your current skincare routine? Please list any products you are currently using.</label>
-        <textarea name="skin-routine" id="skin-routine" cols="10" rows="2"></textarea>
+        <div class="error"></div>
+        <div class="row"><label class="label col-lg-9 margin" for="skin-routine">Q. What is your current skincare routine? Please list any products you are currently using.</label>
+          <textarea name="skin-routine" id="skin-routine" cols="10" rows="2"></textarea>
+          <div class="error"></div></div>
         <label class="label col-lg-9 margin" for="skin-allergy">Q. Are you allergic to any specific skincare ingredients or products?</label>
         <div class="radio-list row" id="skin-allergy">
             <div class="radio-item col-md-4" ><input name="allergy" id="yes" type="radio"><label for="yes">Yes</label></div>
             <div class="radio-item col-md-4"><input name="allergy" id="no" type="radio"><label for="no">No</label></div>
+            <div class="error"></div>
         </div>
       <div class="allergy-yes">  <label class="label col-lg-9 margin" for="allergy-yes">Q. Can you elaborate?</label>
         <textarea name="allergy-yes" id="allergy-yes" cols="50" rows="2"></textarea></div>
@@ -72,6 +76,7 @@
         <div class="radio-list row" id="skin-preference">
             <div class="radio-item col-lg-4" ><input name="preference" id="yes1" type="radio"><label for="yes1">Yes</label></div>
             <div class="radio-item col-lg-4"><input name="preference" id="no1" type="radio"><label for="no1">No</label></div>
+            <div class="error"></div>
         </div>
         <div class="name-preference"><label class="label col-lg-9 margin" for="name-preference">Q. Can you name them ?</label>
           <textarea name="name-preference" id="name-preference" cols="50" rows="2"></textarea></div>
@@ -79,6 +84,7 @@
         <div class="radio-list row" id="skin-preference">
             <div class="radio-item col-md-4" ><input name="photo" id="yes2" type="radio"><label for="yes2">Yes</label></div>
             <div class="radio-item col-md-4"><input name="photo" id="no2" type="radio"><label for="no2">No</label></div>
+            <div class="error"></div>
         </div>
     </div>
 

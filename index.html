@@ -46,71 +46,85 @@
             </div>
           </div>
           <!-- input fields and labels -->
-          <div class="row">
-            <label class="label col-md-3 control-label">First Name</label>
-            <div class="col-md-9">
-                <input type="text" class="form-control" name="firstName" pattern="^[^0-9]+$" placeholder="First Name" required>
-            </div>
-            <label class="label col-md-3 control-label">Last Name</label>
-            <div class="col-md-9">
-                <input type="text" class="form-control" name="lastName" placeholder="Last Name" required>
-            </div>
-            <label class="label col-md-3 control-label">E-mail</label>
-            <div class="col-md-9">
-                <input type="email" class="form-control" name="email" placeholder="E-mail" required>
-            </div>
-            <label class="label col-md-3 control-label" >Phone No.</label>
-            <div class="col-md-9">
-                <input type="text" class="form-control" name="phone" pattern="[0-9]{10}" maxlength="10" placeholder="Phone No" required>
-            </div>
-            <label class="label col-md-3 control-label">Address</label>
-            <div class="col-md-9">
-                <input type="text" class="form-control" name="address" placeholder="Address" required>
-            </div>
-            <label class="label col-md-3 control-label">Age</label>
-            <div class="col-md-9">
-                <input type="number" class="form-control" name="age" max="50" min="12" placeholder="Age">
-            </div>
-            
-            <!-- radio checks -->
-            <!-- specific day -->
-            <label class="label col-md-12 control-label">Schedule 1:1 appointment - What day works best for you</label>
+          <form action="">
+            <div class="row">
+              
+                <label class="label col-md-3 control-label">First Name</label>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" name="firstName" pattern="^[^0-9]+$" placeholder="First Name" required>
+                    <div class="error"></div>
+                </div>
+              
+                <label class="label col-md-3 control-label">Last Name</label>
+              <div class="col-md-9">
+                  <input type="text" class="form-control" name="lastName" placeholder="Last Name" required>
+                  <div class="error"></div>
+              </div>
+              
+              <label class="label col-md-3 control-label">E-mail</label>
+              <div class="col-md-9">
+                  <input type="email" class="form-control" name="email" placeholder="E-mail" required>
+                  <div class="error"></div>
+              </div>
+              <label class="label col-md-3 control-label" >Phone No.</label>
+              <div class="col-md-9">
+                  <input type="text" class="form-control" name="phone" pattern="[0-9]{10}" maxlength="10" placeholder="Phone No" required>
+                  <div class="error"></div>
+              </div>
+              <label class="label col-md-3 control-label">Address</label>
+              <div class="col-md-9">
+                  <input type="text" class="form-control" name="address" placeholder="Address" required>
+                  <div class="error"></div>
+              </div>
+              <label class="label col-md-3 control-label">Age</label>
+              <div class="col-md-9">
+                  <input type="number" class="form-control" name="age" max="50" min="12" placeholder="Age">
+                  <div class="error"></div>
+              </div>
+              
+              <!-- radio checks -->
+              <!-- specific day -->
+              <label class="label col-md-12 control-label">Schedule 1:1 appointment - What day works best for you</label>
+                <!-- <div class="radio-section"> -->
+                  <div class="radio-list row">
+                    <div class="radio-item day col-md-4" ><input name="radio" id="radio1" type="radio"><label for="radio1">Monday</label></div>
+                    <div class="radio-item  day col-md-4"><input name="radio" id="radio2" type="radio"><label for="radio2">Tuesday</label></div>
+                    <div class="radio-item day  col-md-4"><input name="radio" id="radio3" type="radio"><label for="radio3">Wednesday</label></div>
+                 
+                    <div class="radio-item  day col-md-4" ><input name="radio" id="radio4" type="radio"><label for="radio4">Thursday</label></div>
+                    <div class="radio-item  day col-md-4"><input name="radio" id="radio5" type="radio"><label for="radio5">Friday</label></div>
+                    <div class="radio-item  day col-md-4"><input name="radio" id="radio6" type="radio"><label for="radio6">Saturday</label></div>
+                  <!-- </div> -->
+                  <div class="error"></div>
+                </div>
+                <!-- specific time -->
+              <label class="label col-md-12 control-label">What time works best for you ?</label>
+                
+                  <div class="radio-list row">
+                    <div class="radio-item time col-md-4" ><input name="radio1" id="time1" type="radio"><label for="time1">Morning</label></div>
+                    <div class="radio-item time col-md-4"><input name="radio1" id="time2" type="radio"><label for="time2">Afternoon</label></div>
+                    <div class="radio-item time col-md-4"><input name="radio1" id="time3" type="radio"><label for="time3">Evening</label></div>
+                    <div class="error"></div>
+                  </div>
+                
+                <!-- date/time -->
+                <label for="dateTime" class="label col-md-12 control-label">Specific date/time you would like to prefer ?</label>
+                <div class="col-md-12">
+                  <input type="datetime-local" id="dateTime" name="dateTime" required>
+                  <div class="error"></div>        
+                </div>
+                <!-- about us-->
+              <label class="label col-md-12 control-label">How did you heard about us ?</label>
               <div class="radio-section">
                 <div class="radio-list row">
-                  <div class="radio-item day col-md-4" ><input name="radio" id="radio1" type="radio"><label for="radio1">Monday</label></div>
-                  <div class="radio-item  day col-md-4"><input name="radio" id="radio2" type="radio"><label for="radio2">Tuesday</label></div>
-                  <div class="radio-item day  col-md-4"><input name="radio" id="radio3" type="radio"><label for="radio3">Wednesday</label></div>
-                </div>
-                <div class="radio-list row">
-                  <div class="radio-item  day col-md-4" ><input name="radio" id="radio4" type="radio"><label for="radio4">Thursday</label></div>
-                  <div class="radio-item  day col-md-4"><input name="radio" id="radio5" type="radio"><label for="radio5">Friday</label></div>
-                  <div class="radio-item  day col-md-4"><input name="radio" id="radio6" type="radio"><label for="radio6">Saturday</label></div>
+                  <div class="radio-item time col-md-4" ><input name="heard" id="heardOf1" type="radio"><label for="heardOf1">Word of mouths</label></div>
+                  <div class="radio-item time col-md-4"><input name="heard" id="heardOf2" type="radio"><label for="heardOf2">Social Media</label></div>
+                  <div class="radio-item time col-md-4"><input name="heard" id="heardOf3" type="radio"><label for="heardOf3">Online Search</label></div>
+                  <div class="error"></div>
                 </div>
               </div>
-              <!-- specific time -->
-            <label class="label col-md-12 control-label">What time works best for you ?</label>
-              <div class="radio-section">
-                <div class="radio-list row">
-                  <div class="radio-item time col-md-4" ><input name="radio1" id="time1" type="radio"><label for="time1">Morning</label></div>
-                  <div class="radio-item time col-md-4"><input name="radio1" id="time2" type="radio"><label for="time2">Afternoon</label></div>
-                  <div class="radio-item time col-md-4"><input name="radio1" id="time3" type="radio"><label for="time3">Evening</label></div>
-                </div>
-              </div>
-              <!-- date/time -->
-              <label for="dateTime" class="label col-md-12 control-label">Specific date/time you would like to prefer ?</label>
-              <div class="col-md-12">
-                <input type="datetime-local" id="dateTime" name="dateTime" required>            
-              </div>
-              <!-- about us-->
-            <label class="label col-md-12 control-label">How did you heard about us ?</label>
-            <div class="radio-section">
-              <div class="radio-list row">
-                <div class="radio-item time col-md-4" ><input name="heard" id="heardOf1" type="radio"><label for="heardOf1">Word of mouths</label></div>
-                <div class="radio-item time col-md-4"><input name="heard" id="heardOf2" type="radio"><label for="heardOf2">Social Media</label></div>
-                <div class="radio-item time col-md-4"><input name="heard" id="heardOf3" type="radio"><label for="heardOf3">Online Search</label></div>
-              </div>
-            </div>
-           
+  
+          </form>           
           </div>
         </div>
         

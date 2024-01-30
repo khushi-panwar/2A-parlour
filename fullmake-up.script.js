@@ -1,58 +1,90 @@
+
+
 let accessoriesPic = document.getElementById("accessories-pic");
 let accessoriesDescription = document.getElementById("description");
 let accessoriesDiv = document.querySelector(".accessories-label");
-let accessoriesYes = document.getElementById("yes");
+let accessoriesYesInput = document.getElementById("yes");
 
-accessoriesYes.addEventListener("click", () => {
+
+
+accessoriesYesInput.addEventListener("click", () => {
   accessoriesPic.style.display = "block"
   accessoriesDescription.style.display = "block"
   accessoriesDiv.style.display = "block"
 })
 
+// error msgs
+const setError = (element, message) => {
+  const inputControl = element;
+  console.log(inputControl);
+  const errorDisplay = inputControl.parentElement.querySelector('.error');
+  console.log(errorDisplay.innerText);
+  errorDisplay.innerText = message;
+}
 
+const setSuccess = element => {
+  const inputControl = element;
+  const errorDisplay = inputControl.parentElement.querySelector('.error');
+
+  errorDisplay.innerText = ""
+};
+
+const setErrorOption = (element, message) => {
+  const inputControl = element.parentElement;
+  const errorDisplay = inputControl.parentElement.querySelector('.error');
+console.log(errorDisplay);
+  errorDisplay.innerText = message;
+  console.log(errorDisplay.innerText);
+}
+
+const setSuccessOption = (element) => {
+  const inputControl = element.parentElement;
+  const errorDisplay = inputControl.parentElement.querySelector('.error');
+
+  errorDisplay.innerText = "";
+}
 
 let hairtype, skincolor;
-function validateFullMakeUp() {
+ function validateFullMakeUp() {
   // Validate skin type selection
   if (!skincolor) {
-    alert("skin color not selected");
+    alert( "skin color not selected");
     return;
   }
+  // let hairTypeCards = document.querySelectorAll(".row.requirement .card input");
 
   if (!hairtype) {
     alert("hair type not selected");
     return;
   }
 
-  // Validate hair type selection
-  // let hairTypeCards = document.querySelectorAll(".row.requirement .card input:checked");
-  // if (hairTypeCards.length === 0) {
-  //   alert("Please select your hair type.");
-  //   return false;
-  // }
 
   // Validate outfit description and color
-  let outfitDescription = document.querySelector("textarea[name='outfit']").value.trim();
-  let outfitFile = document.querySelector("input[name='outfit']").value.trim();
-  if (outfitDescription === "" && outfitFile === "") {
-    alert("Please provide your outfit description or upload an outfit image.");
+  let outfitDescriptionInput = document.querySelector("textarea[name='outfit']");
+  let outfitDescription = outfitDescriptionInput.value.trim();
+
+  
+  if (outfitDescription === "" ) {
+    setError(outfitDescriptionInput,"Please provide your outfit description or upload an outfit image.");
     return false;
+  }
+  else{
+    setSuccess(outfitDescriptionInput);
   }
 
   // Validate accessories selection
 
-  let accessoriesNo = document.getElementById("no").checked;
+  let accessoriesNoInput= document.getElementById("no");
+  let accessoriesNo = accessoriesNoInput.checked;
+  let accessoriesYes = accessoriesYesInput.checked;
   if (!accessoriesYes && !accessoriesNo) {
-    alert("Please select whether you have matching jewellery.");
-    return false;
+    setErrorOption(accessoriesNoInput, "Please select whether you have matching jewellery.");
+    return ;
+  }
+  else{
+    setSuccessOption(accessoriesNoInput);
   }
 
-  if (accessoriesYes === 'yes') {
-    if (accessoriesDescription.value.trim() === "") {
-      alert("can not be empty")
-      return;
-    }
-  }
   // If all validations pass, the form is valid
   Swal.fire({
     title: "Submitted",
@@ -71,3 +103,6 @@ function skinColor(color) {
   skincolor = color;
   console.log(skincolor);
 }
+
+// import validation error msg functionality
+// import {setError } from './index.script.js'

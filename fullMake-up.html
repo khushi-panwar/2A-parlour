@@ -47,6 +47,7 @@
             <option value="oily">Oily skin</option>
             <option value="dry">Dry skin</option>
             <option value="normal">Normal skin</option>
+            <div class="error"></div>
         </select>
       </div>
       <div class="row color">
@@ -57,6 +58,7 @@
           <div class="option e0ac69" id="skin" onclick="skinColor('e0ac69')"></div>
           <div class="option c68642" id="skin" onclick="skinColor('c68642')"></div>
           <div class="option a8d5524" id="skin" onclick="skinColor('a8d5524')"></div>
+          <div class="error"></div>
         </div>
       </div>
       <div class="row color">
@@ -106,22 +108,25 @@
       <!-- outfit -->
       <label class="label col-md-12 control-label" for="outfit">Q. Can you describe your outfit and color ?</label>
       <textarea rows="4" cols="50" name="outfit" class="outfit-textArea"></textarea>
+      <div class="error"></div>
       <input type="file" name="outfit" id="outfit" class="color">
       <!-- accessories -->
       <label class="label col-md-12 control-label" for="accessories">Q. Do you have matching jewellery?</label>
         <div class="radio-list row" id="accessories">
           <div class="radio-item col-md-4" ><input name="radio" id="yes" type="radio"><label for="yes">Yes</label></div>
           <div class="radio-item col-md-4"><input name="radio" id="no" type="radio"><label for="no">No</label></div>
+          <div class="error"></div>
         </div>
      <div class="accessories-label">
       <label class="label col-md-12 control-label"  for="accessories-description">Q. Can you descript?</label>
       <div class="radio-list row" id="accessories-description">
         <div class="radio-item col-md-4" ><input name="accessories-description" id="description" type="text"></div>
         <div class="radio-item col-md-4"><input name="accessories-pic" id="accessories-pic" type="file"></div>
+        <div class="error"></div>
       </div>
     </div>
     <div class="margin">
-        <input type="submit"  value="Submit" class="submit" onclick="validateFullMakeUp()">
+        <input type="submit"  value="Submit" class="submit" onclick=" validateFullMakeUp()">
       </div>
       
     </div>
@@ -133,5 +138,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
     <script src="script.js"></script>
     <script src="./fullmake-up.script.js"></script>
+    <script src="./index.script.js"></script>
   </body>
 </html>
